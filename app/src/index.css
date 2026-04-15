@@ -5,58 +5,54 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: hsl(0 0% 100%);
-  --foreground: hsl(222.2 84% 4.9%);
-  --card: hsl(0 0% 100%);
-  --card-foreground: hsl(222.2 84% 4.9%);
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(222.2 84% 4.9%);
-  --primary: hsl(222.2 47.4% 11.2%);
-  --primary-foreground: hsl(210 40% 98%);
-  --secondary: hsl(210 40% 96.1%);
-  --secondary-foreground: hsl(222.2 47.4% 11.2%);
-  --muted: hsl(210 40% 96.1%);
-  --muted-foreground: hsl(215.4 16.3% 46.9%);
-  --accent: hsl(210 40% 96.1%);
-  --accent-foreground: hsl(222.2 47.4% 11.2%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(210 40% 98%);
-  --border: hsl(214.3 31.8% 91.4%);
-  --input: hsl(214.3 31.8% 91.4%);
-  --ring: hsl(222.2 84% 4.9%);
-  --chart-1: hsl(12 76% 61%);
-  --chart-2: hsl(173 58% 39%);
-  --chart-3: hsl(197 37% 24%);
-  --chart-4: hsl(43 74% 66%);
-  --chart-5: hsl(27 87% 67%);
+  --background: 0 0% 97%; /* #f8f8f6 */
+  --foreground: 222.2 84% 4.9%; /* Slate-900 roughly */
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 45 85% 50%; /* #ecb613 */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 45 85% 50% / 0.1; /* primary_muted */
+  --secondary-foreground: 45 85% 50%;
+  --muted: 215 16% 47%; /* #64748b */
+  --muted-foreground: 215 16% 47%;
+  --accent: 45 85% 50% / 0.1;
+  --accent-foreground: 45 85% 50%;
+  --destructive: 349 89% 60%; /* #f43f5e */
+  --destructive-foreground: 0 0% 100%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 45 85% 50%;
   --radius: 0.5rem;
+
+  /* Custom Tokens */
+  --brand-primary: #ecb613;
+  --brand-primary-muted: rgba(236, 182, 19, 0.1);
+  --success: #10b981;
+  --error: #f43f5e;
 }
 
 .dark {
-  --background: hsl(222.2 84% 4.9%);
-  --foreground: hsl(210 40% 98%);
-  --card: hsl(222.2 84% 4.9%);
-  --card-foreground: hsl(210 40% 98%);
-  --popover: hsl(222.2 84% 4.9%);
-  --popover-foreground: hsl(210 40% 98%);
-  --primary: hsl(210 40% 98%);
-  --primary-foreground: hsl(222.2 47.4% 11.2%);
-  --secondary: hsl(217.2 32.6% 17.5%);
-  --secondary-foreground: hsl(210 40% 98%);
-  --muted: hsl(217.2 32.6% 17.5%);
-  --muted-foreground: hsl(215 20.2% 65.1%);
-  --accent: hsl(217.2 32.6% 17.5%);
-  --accent-foreground: hsl(210 40% 98%);
-  --destructive: hsl(0 62.8% 30.6%);
-  --destructive-foreground: hsl(210 40% 98%);
-  --border: hsl(217.2 32.6% 17.5%);
-  --input: hsl(217.2 32.6% 17.5%);
-  --ring: hsl(212.7 26.8% 83.9%);
-  --chart-1: hsl(220 70% 50%);
-  --chart-2: hsl(160 60% 45%);
-  --chart-3: hsl(30 80% 55%);
-  --chart-4: hsl(280 65% 60%);
-  --chart-5: hsl(340 75% 55%);
+  --background: 44 34% 10%; /* #221d10 - Deep Coffee */
+  --foreground: 210 40% 98%; /* Slate-100 */
+  --card: 44 34% 13%; /* #2d2616 - Surface Dark */
+  --card-foreground: 210 40% 98%;
+  --popover: 44 34% 13%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 45 85% 50%; /* #ecb613 */
+  --primary-foreground: 44 34% 10%;
+  --secondary: 45 85% 50% / 0.1;
+  --secondary-foreground: 45 85% 50%;
+  --muted: 215 20% 65%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 45 85% 50% / 0.1;
+  --accent-foreground: 45 85% 50%;
+  --destructive: 349 89% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 44 32% 20%; /* #443a22 - Border Dark */
+  --input: 44 32% 20%;
+  --ring: 45 85% 50%;
 }
 
 @theme inline {
@@ -79,14 +75,22 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
+  
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-muted: var(--brand-primary-muted);
+  --color-success: var(--success);
+  --color-error: var(--error);
+
+  --shadow-primary-glow: 0 8px 30px rgba(236, 182, 19, 0.3);
+
+  --radius-sm: 0.25rem;
+  --radius-base: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  --font-main: 'Inter', sans-serif;
+  --font-icons: 'Material Symbols Outlined';
 }
 
 @layer base {
